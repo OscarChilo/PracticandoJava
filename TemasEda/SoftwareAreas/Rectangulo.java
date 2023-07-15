@@ -18,7 +18,8 @@ public class Rectangulo extends Poligono {
     }
 
     public String toString() {
-        return "Rectangulo, su numero de lados es: " + numeroLados + " y son los siguientes: " + lado1 + ", " + lado2;
+        return "Rectangulo, su numero de lados es: " + super.numeroLados + " y son los siguientes: " + lado1 + ", "
+                + lado2;
     }
 
     public double area() {
