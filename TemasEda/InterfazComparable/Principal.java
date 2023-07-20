@@ -16,3 +16,8 @@ public class Principal {
         System.out.println(alumnos);
     }
 }
+
+class TrieNode {
+    TrieNode[] children = new TrieNode[ALPHABET_SIZE];
+    boolean isEndOfWord;
+}
