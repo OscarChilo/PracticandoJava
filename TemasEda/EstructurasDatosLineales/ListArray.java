@@ -1,5 +1,7 @@
 package TemasEda.EstructurasDatosLineales;
 
+//import javax.swing.text.html.HTMLDocument.Iterator;
+
 public class ListArray<T> {
     private T[] list;
     private int index;
@@ -14,7 +16,32 @@ public class ListArray<T> {
         index++;
     }
 
-    public T[] get() {
-        return this.list;
+    public T get(int i) {
+        return list[i];
+    }
+
+    public int size() {
+        return index;
+    }
+
+    public boolean isEmpty() {
+        return index == 0;
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+        return new Iterator<T>() {
+            private int currentIndex = 0;
+
+            @Override
+            public boolean hasNext() {
+                return currentIndex < index && list[currentIndex] != null;
+            }
+
+            @Override
+            public T next() {
+                return list[currentIndex];
+            }
+        };
     }
 }
