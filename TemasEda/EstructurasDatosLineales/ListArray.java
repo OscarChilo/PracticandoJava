@@ -1,5 +1,7 @@
 package TemasEda.EstructurasDatosLineales;
 
+import java.util.Iterator;
+
 //import javax.swing.text.html.HTMLDocument.Iterator;
 
 public class ListArray<T> {
@@ -29,7 +31,7 @@ public class ListArray<T> {
     }
 
     @Override
-    public Iterator<T> iterator() {
+    public Iterator<T> iter() {
         return new Iterator<T>() {
             private int currentIndex = 0;
 
